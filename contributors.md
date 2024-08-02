@@ -18,3 +18,6 @@ Training Program Helpers
 Other Contributors
 
 - Jeremy Le
+- Merry Rosalie
+- Daniel Huynh
+- Rachel Bai
