@@ -16,7 +16,7 @@ Git is a version control system that tracks changes to a set of computer files w
 
 This guide will not cover how to work and use Git. If you want to learn how to use Git please read this [Git Basics Guide](https://gist.github.com/jeremyle56/f3b664f0491d6ec0d9a03ab34780b876).
 
-### Installing Git on macOs
+### Installing Git on MacOS
 
 If you're using macOS, open a terminal and enter the following command:
 
@@ -26,13 +26,21 @@ brew install git
 
 This command will use [Homebrew](https://brew.sh/) to install git. Git may already be installed on your system, however this will ensure you have a more updated version.
 
-### Installing Git on Linux
+### Installing Git on Linux & WSL
 
 If you followed the previous guide your Window's setup should now be running WSL and you will be coding within a linux sub shell. To install Git run the following commands in a terminal:
 
 ```sh
 sudo apt update && sudo apt upgrade
 sudo apt install git
+```
+
+### Installing Git on Windows (Local)
+
+Install git with the following command in a powershell instance.
+
+```ps1
+winget install --id Git.Git -e --source winget
 ```
 
 ### Configuring Git
@@ -44,9 +52,15 @@ git config --global user.name "Nicole Chun"
 git config --global user.email "hello@devsoc.org.au"
 ```
 
-You will now need to setup SSH keys which can be done by following the Guide mentioned above.
+**You will now need to setup SSH keys if you haven't already. [Guide for setting up SSH with GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)**
 
-## Node and Node Package Manager (NPM)
+## Node and Node Package Manager (NPM) - Windows Local
+
+**This installation process doesn't include a version manager.**
+
+Download [node](https://nodejs.org/en/download/prebuilt-installer) and follow the installation process. Install with all the default options.
+
+## Node and Node Package Manager (NPM) - MacOS, Linux, WSL
 
 Throughout this course we will be working with JavaScript, TypeScript and the React framework which all involve using both Node and NPM. The best way to install this is to use [Node Version Manager](https://github.com/nvm-sh/nvm) (NVM) which allows you to change your node version at will.
 
