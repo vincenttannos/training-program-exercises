@@ -8,6 +8,12 @@ const main = document.querySelector("#display-box")
 const button = document.querySelector("button")
 
 button.addEventListener("click", () => {
-    fetch("://api.adviceslip.com/advice")
-        .then(...)
+    // yoink API advice
+    fetch("https://api.adviceslip.com/advice")
+        .then(resp => resp.json())
+        // console.log() returns undefined, so have to comment this out
+        // .then(data => console.log(data))
+        .then((data) => {
+            main.innerHTML = data.slip.advice;
+        });
 })
